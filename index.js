@@ -9,6 +9,7 @@ const app = express();
 app.use(express.json()); 
 const cors = require('cors');
 app.use(cors());  // This allows all domains, adjust if needed for security
+app.use(express.static('public'));
 
 mongoose
   .connect(process.env.MONGO_URI)
