@@ -16,6 +16,10 @@ mongoose
   .then(() => console.log('✅ MongoDB connected'))
   .catch((err) => console.error('❌ MongoDB error:', err));
 
+  app.get('/', (req, res) => {
+    res.send('Welcome to the API!');
+  });
+  
 app.post('/api/sms', async (req, res) => {
   try {
     const { sender, body } = req.body;
